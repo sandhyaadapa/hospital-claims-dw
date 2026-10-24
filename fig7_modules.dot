@@ -1,0 +1,8 @@
+digraph G { rankdir=LR; nodesep=0.3; ranksep=0.4; graph [fontname="Liberation Serif", pad=0.15, bgcolor=white]; node [fontname="Liberation Serif", fontsize=12, style="filled,rounded", shape=box, fillcolor="#E8EEF5", color="#1F3A5F", penwidth=1.3]; edge [fontname="Liberation Serif", fontsize=10, color="#1F3A5F", penwidth=1.2];
+
+m1 [label="M1\nSource data\nsimulation and\nextraction"]; m2 [label="M2\nData quality\nand staging", fillcolor="#FBE9D8", color="#C8691E"];
+m3 [label="M3\nDimension\nmodelling\n(SCD-1 / SCD-2)", fillcolor="#D7EEEC", color="#1B7F79"]; m4 [label="M4\nFact loading\nand snapshot", fillcolor="#D7EEEC", color="#1B7F79"];
+m5 [label="M5\nOLAP analytics,\ntesting and\nreporting"]; au [label="ETL audit and\nDQ reject log", shape=cylinder, fillcolor=white];
+m1 -> m2 [label="delta rows"]; m2 -> m3 [label="clean rows"]; m3 -> m4 [label="surrogate keys"]; m4 -> m5 [label="facts"]; m3 -> m5 [label="dimensions", constraint=false];
+m2 -> au [style=dashed]; m4 -> au [style=dashed]; m5 -> m1 [label="next batch", style=dotted, constraint=false];
+}

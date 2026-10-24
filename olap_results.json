@@ -1,0 +1,1011 @@
+{
+ "queries": {
+  "Q1": {
+   "title": "Monthly claims, billed and paid amount (roll-up to month)",
+   "columns": [
+    "year",
+    "month",
+    "claims",
+    "billed",
+    "paid"
+   ],
+   "rows": [
+    [
+     2023,
+     1,
+     2033.0,
+     96648877.74,
+     66247581.0
+    ],
+    [
+     2023,
+     2,
+     2357.0,
+     119849536.95,
+     82687685.77
+    ],
+    [
+     2023,
+     3,
+     2388.0,
+     127559747.77,
+     88039341.38
+    ],
+    [
+     2023,
+     4,
+     2251.0,
+     119806743.6,
+     81647126.42
+    ],
+    [
+     2023,
+     5,
+     2296.0,
+     122874480.59,
+     84679658.06
+    ],
+    [
+     2023,
+     6,
+     2148.0,
+     116494158.64,
+     79629857.65
+    ],
+    [
+     2023,
+     7,
+     2526.0,
+     130361321.42,
+     90895371.38
+    ],
+    [
+     2023,
+     8,
+     2726.0,
+     133219528.22,
+     92089911.58
+    ],
+    [
+     2023,
+     9,
+     2761.0,
+     127800601.05,
+     90038604.58
+    ],
+    [
+     2023,
+     10,
+     2727.0,
+     128752384.28,
+     90384106.4
+    ],
+    [
+     2023,
+     11,
+     2565.0,
+     121785528.65,
+     82863473.67
+    ],
+    [
+     2023,
+     12,
+     2714.0,
+     130896680.21,
+     92352999.03
+    ],
+    [
+     2024,
+     1,
+     2891.0,
+     138595392.38,
+     96248571.94
+    ],
+    [
+     2024,
+     2,
+     2706.0,
+     144089276.32,
+     99588781.08
+    ],
+    [
+     2024,
+     3,
+     2657.0,
+     137986168.04,
+     94677277.14
+    ],
+    [
+     2024,
+     4,
+     2410.0,
+     121024079.77,
+     84290808.07
+    ],
+    [
+     2024,
+     5,
+     2514.0,
+     136286355.5,
+     95640952.55
+    ],
+    [
+     2024,
+     6,
+     2572.0,
+     135669380.39,
+     95722808.05
+    ],
+    [
+     2024,
+     7,
+     2953.0,
+     153219268.8,
+     104837832.94
+    ],
+    [
+     2024,
+     8,
+     2948.0,
+     144770151.35,
+     100906085.79
+    ],
+    [
+     2024,
+     9,
+     3008.0,
+     148432855.6,
+     102678720.63
+    ],
+    [
+     2024,
+     10,
+     3157.0,
+     155721905.14,
+     108764481.6
+    ],
+    [
+     2024,
+     11,
+     2765.0,
+     141164556.68,
+     98247933.39
+    ],
+    [
+     2024,
+     12,
+     2958.0,
+     145901743.94,
+     102267779.9
+    ],
+    [
+     2025,
+     1,
+     3234.0,
+     158096020.88,
+     107785531.46
+    ],
+    [
+     2025,
+     2,
+     2920.0,
+     151596540.94,
+     104605295.4
+    ],
+    [
+     2025,
+     3,
+     2998.0,
+     156336408.64,
+     107644326.16
+    ],
+    [
+     2025,
+     4,
+     2863.0,
+     158494163.13,
+     112309270.83
+    ],
+    [
+     2025,
+     5,
+     2861.0,
+     151455000.03,
+     106038567.77
+    ],
+    [
+     2025,
+     6,
+     2807.0,
+     149301183.63,
+     104742278.67
+    ],
+    [
+     2025,
+     7,
+     3176.0,
+     160802013.4,
+     110864632.56
+    ],
+    [
+     2025,
+     8,
+     3330.0,
+     167426801.58,
+     115901295.05
+    ],
+    [
+     2025,
+     9,
+     3357.0,
+     166413348.91,
+     114482876.25
+    ],
+    [
+     2025,
+     10,
+     3396.0,
+     165231566.11,
+     115003854.37
+    ],
+    [
+     2025,
+     11,
+     3195.0,
+     160830553.22,
+     108679146.9
+    ],
+    [
+     2025,
+     12,
+     2832.0,
+     153757679.1,
+     70510647.9
+    ]
+   ]
+  },
+  "Q2": {
+   "title": "Denial rate by insurer and year (slice and dice)",
+   "columns": [
+    "insurer_name",
+    "year",
+    "claims",
+    "denied",
+    "denial_rate_pct"
+   ],
+   "rows": [
+    [
+     "Arogya Mutual General",
+     2023,
+     4849.0,
+     391.0,
+     8.06
+    ],
+    [
+     "Arogya Mutual General",
+     2024,
+     5499.0,
+     398.0,
+     7.24
+    ],
+    [
+     "Arogya Mutual General",
+     2025,
+     6004.0,
+     439.0,
+     7.51
+    ],
+    [
+     "Bharat Swasthya Assurance",
+     2023,
+     3519.0,
+     164.0,
+     4.66
+    ],
+    [
+     "Bharat Swasthya Assurance",
+     2024,
+     3999.0,
+     214.0,
+     5.35
+    ],
+    [
+     "Bharat Swasthya Assurance",
+     2025,
+     4470.0,
+     210.0,
+     4.76
+    ],
+    [
+     "Kalyan Corporate Health",
+     2023,
+     4615.0,
+     272.0,
+     5.89
+    ],
+    [
+     "Kalyan Corporate Health",
+     2024,
+     5244.0,
+     286.0,
+     5.45
+    ],
+    [
+     "Kalyan Corporate Health",
+     2025,
+     5738.0,
+     351.0,
+     6.25
+    ],
+    [
+     "Sanjeevani Health Insurance",
+     2023,
+     5842.0,
+     376.0,
+     6.44
+    ],
+    [
+     "Sanjeevani Health Insurance",
+     2024,
+     6805.0,
+     442.0,
+     6.5
+    ],
+    [
+     "Sanjeevani Health Insurance",
+     2025,
+     7362.0,
+     461.0,
+     6.37
+    ],
+    [
+     "State Health Assurance Trust",
+     2023,
+     6464.0,
+     509.0,
+     7.87
+    ],
+    [
+     "State Health Assurance Trust",
+     2024,
+     7302.0,
+     622.0,
+     8.52
+    ],
+    [
+     "State Health Assurance Trust",
+     2025,
+     8084.0,
+     693.0,
+     9.14
+    ],
+    [
+     "Suraksha Care TPA",
+     2023,
+     4203.0,
+     468.0,
+     11.13
+    ],
+    [
+     "Suraksha Care TPA",
+     2024,
+     4690.0,
+     468.0,
+     9.98
+    ],
+    [
+     "Suraksha Care TPA",
+     2025,
+     5311.0,
+     582.0,
+     11.51
+    ]
+   ]
+  },
+  "Q3": {
+   "title": "Top 10 diagnoses by insurer-paid amount",
+   "columns": [
+    "icd10_code",
+    "description",
+    "claims",
+    "paid",
+    "paid_per_claim"
+   ],
+   "rows": [
+    [
+     "M17.9",
+     "Osteoarthritis of knee, unspecified",
+     2705.0,
+     570018356.79,
+     210727.67
+    ],
+    [
+     "I21.9",
+     "Acute myocardial infarction, unspecified",
+     3486.0,
+     366423543.95,
+     105112.89
+    ],
+    [
+     "S72.0",
+     "Fracture of neck of femur",
+     1745.0,
+     302631174.83,
+     173427.61
+    ],
+    [
+     "O82",
+     "Encounter for caesarean delivery without indication",
+     4140.0,
+     223052505.55,
+     53877.42
+    ],
+    [
+     "H25.9",
+     "Senile cataract, unspecified",
+     4817.0,
+     160498513.54,
+     33319.18
+    ],
+    [
+     "K35.8",
+     "Acute appendicitis, other and unspecified",
+     3248.0,
+     152102225.91,
+     46829.5
+    ],
+    [
+     "K80.2",
+     "Calculus of gallbladder without cholecystitis",
+     3359.0,
+     141293378.68,
+     42064.12
+    ],
+    [
+     "J18.9",
+     "Pneumonia, unspecified organism",
+     6405.0,
+     128105609.36,
+     20000.88
+    ],
+    [
+     "C50.9",
+     "Malignant neoplasm of breast, unspecified",
+     1683.0,
+     116664538.01,
+     69319.39
+    ],
+    [
+     "E11.9",
+     "Type 2 diabetes mellitus without complications",
+     7698.0,
+     104338785.58,
+     13554.01
+    ]
+   ]
+  },
+  "Q4": {
+   "title": "Hospital by claim type: claims, avg processing days, settlement ratio",
+   "columns": [
+    "hospital_name",
+    "claim_type",
+    "claims",
+    "avg_days",
+    "settlement_pct"
+   ],
+   "rows": [
+    [
+     "Amaravati General Hospital",
+     "Cashless",
+     6601.0,
+     10.51,
+     70.21
+    ],
+    [
+     "Amaravati General Hospital",
+     "Reimbursement",
+     3942.0,
+     21.22,
+     67.37
+    ],
+    [
+     "Godavari Multispeciality Hospital",
+     "Cashless",
+     8065.0,
+     10.59,
+     69.72
+    ],
+    [
+     "Godavari Multispeciality Hospital",
+     "Reimbursement",
+     4809.0,
+     20.98,
+     67.03
+    ],
+    [
+     "Kakinada District Hospital",
+     "Cashless",
+     7471.0,
+     10.69,
+     69.17
+    ],
+    [
+     "Kakinada District Hospital",
+     "Reimbursement",
+     4352.0,
+     21.0,
+     66.85
+    ],
+    [
+     "Krishna Institute of Medical Care",
+     "Cashless",
+     9886.0,
+     10.6,
+     69.47
+    ],
+    [
+     "Krishna Institute of Medical Care",
+     "Reimbursement",
+     6042.0,
+     20.88,
+     67.74
+    ],
+    [
+     "Nellore Medical College Hospital",
+     "Cashless",
+     8542.0,
+     10.55,
+     69.76
+    ],
+    [
+     "Nellore Medical College Hospital",
+     "Reimbursement",
+     5258.0,
+     20.95,
+     66.68
+    ],
+    [
+     "Rajahmundry Community Hospital",
+     "Cashless",
+     4669.0,
+     10.45,
+     69.51
+    ],
+    [
+     "Rajahmundry Community Hospital",
+     "Reimbursement",
+     2938.0,
+     20.64,
+     66.54
+    ],
+    [
+     "Sagar Super Speciality Hospital",
+     "Cashless",
+     11157.0,
+     10.58,
+     69.27
+    ],
+    [
+     "Sagar Super Speciality Hospital",
+     "Reimbursement",
+     6735.0,
+     20.9,
+     67.14
+    ],
+    [
+     "Tirumala Heart and Kidney Centre",
+     "Cashless",
+     5857.0,
+     10.4,
+     69.31
+    ],
+    [
+     "Tirumala Heart and Kidney Centre",
+     "Reimbursement",
+     3676.0,
+     21.09,
+     66.49
+    ]
+   ]
+  },
+  "Q5": {
+   "title": "Utilisation by age band and gender",
+   "columns": [
+    "age_band",
+    "gender",
+    "claims",
+    "billed_per_claim"
+   ],
+   "rows": [
+    [
+     "0-17",
+     "F",
+     1033.0,
+     28346.49
+    ],
+    [
+     "0-17",
+     "M",
+     1251.0,
+     28695.9
+    ],
+    [
+     "18-34",
+     "F",
+     14019.0,
+     39198.94
+    ],
+    [
+     "18-34",
+     "M",
+     7847.0,
+     30181.65
+    ],
+    [
+     "35-49",
+     "F",
+     15399.0,
+     41469.31
+    ],
+    [
+     "35-49",
+     "M",
+     13053.0,
+     36186.4
+    ],
+    [
+     "50-64",
+     "F",
+     14037.0,
+     64253.41
+    ],
+    [
+     "50-64",
+     "M",
+     14334.0,
+     63386.79
+    ],
+    [
+     "65+",
+     "F",
+     9268.0,
+     69650.76
+    ],
+    [
+     "65+",
+     "M",
+     9759.0,
+     67644.69
+    ]
+   ]
+  },
+  "Q6": {
+   "title": "Denied amount by denial reason and insurer type",
+   "columns": [
+    "denial_reason",
+    "insurer_type",
+    "claims",
+    "denied_amount"
+   ],
+   "rows": [
+    [
+     "Exceeds package rate",
+     "Government",
+     470.0,
+     4724003.31
+    ],
+    [
+     "Exceeds package rate",
+     "Private",
+     1374.0,
+     16707285.97
+    ],
+    [
+     "Exceeds package rate",
+     "TPA",
+     304.0,
+     3716571.38
+    ],
+    [
+     "Incomplete documentation",
+     "Government",
+     552.0,
+     23015888.07
+    ],
+    [
+     "Incomplete documentation",
+     "Private",
+     1285.0,
+     64563355.03
+    ],
+    [
+     "Incomplete documentation",
+     "TPA",
+     435.0,
+     19990851.97
+    ],
+    [
+     "Non-payable items",
+     "Government",
+     691.0,
+     7109131.35
+    ],
+    [
+     "Non-payable items",
+     "Private",
+     2103.0,
+     25534331.69
+    ],
+    [
+     "Non-payable items",
+     "TPA",
+     490.0,
+     5638903.2
+    ],
+    [
+     "Not medically necessary",
+     "Government",
+     283.0,
+     11361767.55
+    ],
+    [
+     "Not medically necessary",
+     "Private",
+     588.0,
+     30189731.5
+    ],
+    [
+     "Not medically necessary",
+     "TPA",
+     234.0,
+     12181440.49
+    ],
+    [
+     "Policy lapsed or not in force",
+     "Government",
+     202.0,
+     11440451.55
+    ],
+    [
+     "Policy lapsed or not in force",
+     "Private",
+     386.0,
+     16933325.3
+    ],
+    [
+     "Policy lapsed or not in force",
+     "TPA",
+     159.0,
+     7188165.84
+    ],
+    [
+     "Pre-existing condition",
+     "Government",
+     361.0,
+     18039394.37
+    ],
+    [
+     "Pre-existing condition",
+     "Private",
+     797.0,
+     39011792.77
+    ],
+    [
+     "Pre-existing condition",
+     "TPA",
+     303.0,
+     13423097.99
+    ],
+    [
+     "Proportionate deduction",
+     "Government",
+     482.0,
+     5192024.74
+    ],
+    [
+     "Proportionate deduction",
+     "Private",
+     1400.0,
+     16823782.82
+    ],
+    [
+     "Proportionate deduction",
+     "TPA",
+     291.0,
+     3436278.49
+    ],
+    [
+     "Room rent capping",
+     "Government",
+     648.0,
+     7381573.73
+    ],
+    [
+     "Room rent capping",
+     "Private",
+     2106.0,
+     25200638.44
+    ],
+    [
+     "Room rent capping",
+     "TPA",
+     477.0,
+     5338148.36
+    ],
+    [
+     "Sum insured exhausted",
+     "Government",
+     185.0,
+     6903637.37
+    ],
+    [
+     "Sum insured exhausted",
+     "Private",
+     391.0,
+     19163901.84
+    ],
+    [
+     "Sum insured exhausted",
+     "TPA",
+     151.0,
+     8899541.55
+    ],
+    [
+     "Waiting period not completed",
+     "Government",
+     241.0,
+     12140323.16
+    ],
+    [
+     "Waiting period not completed",
+     "Private",
+     557.0,
+     28545417.23
+    ],
+    [
+     "Waiting period not completed",
+     "TPA",
+     236.0,
+     11890000.13
+    ]
+   ]
+  }
+ },
+ "timings": {
+  "Q1": {
+   "3nf_ms": 865.1,
+   "star_ms": 232.6
+  },
+  "Q2": {
+   "3nf_ms": 177.1,
+   "star_ms": 439.0
+  },
+  "Q3": {
+   "3nf_ms": 502.5,
+   "star_ms": 96.0
+  },
+  "Q4": {
+   "3nf_ms": 317.8,
+   "star_ms": 589.2
+  },
+  "Q5": {
+   "3nf_ms": 1042.8,
+   "star_ms": 418.9
+  },
+  "Q6": {
+   "3nf_ms": 227.5,
+   "star_ms": 143.6
+  },
+  "Q1_snapshot": {
+   "star_ms": 0.3
+  }
+ },
+ "equal": {
+  "Q1": true,
+  "Q2": true,
+  "Q3": true,
+  "Q4": true,
+  "Q5": true,
+  "Q6": true,
+  "Q1_snapshot": true
+ },
+ "scd2": {
+  "history_correct": [
+   [
+    "Vijayawada",
+    1435.0
+   ],
+   [
+    "Eluru",
+    1416.0
+   ],
+   [
+    "Visakhapatnam",
+    1335.0
+   ],
+   [
+    "Guntur",
+    1094.0
+   ],
+   [
+    "Hyderabad",
+    1041.0
+   ],
+   [
+    "Rajahmundry",
+    895.0
+   ],
+   [
+    "Tirupati",
+    773.0
+   ],
+   [
+    "Kakinada",
+    758.0
+   ],
+   [
+    "Nellore",
+    691.0
+   ]
+  ],
+  "current_state": [
+   [
+    "Vijayawada",
+    1325.0
+   ],
+   [
+    "Eluru",
+    1275.0
+   ],
+   [
+    "Visakhapatnam",
+    1183.0
+   ],
+   [
+    "Guntur",
+    1131.0
+   ],
+   [
+    "Hyderabad",
+    1059.0
+   ],
+   [
+    "Rajahmundry",
+    990.0
+   ],
+   [
+    "Kakinada",
+    861.0
+   ],
+   [
+    "Tirupati",
+    858.0
+   ],
+   [
+    "Nellore",
+    756.0
+   ]
+  ]
+ },
+ "sizes": {
+  "dim_date": 1827,
+  "dim_patient": 27391,
+  "dim_provider": 133,
+  "dim_hospital": 8,
+  "dim_diagnosis": 31,
+  "dim_procedure": 24,
+  "dim_insurer": 6,
+  "dim_plan": 18,
+  "dim_claim_status": 72,
+  "fact_claim_line": 568643,
+  "fact_claim_monthly_snapshot": 1728,
+  "dq_reject": 3462,
+  "3nf_claim": 100000,
+  "3nf_claim_line": 568643
+ },
+ "files_mb": {
+  "source_oltp": 84.3,
+  "dw": 142.1,
+  "baseline_3nf": 84.7
+ }
+}

@@ -1,0 +1,14 @@
+[06:54:08] ===== ETL batch 1  (business date 2024-12-31) =====
+[06:54:10] EXTRACT   watermark 1900-01-01 -> 2024-12-31: 63,188 claim rows, 359,423 line rows, 25,000 patients  (2.2s)
+[06:54:10] TRANSFORM data-quality gate: 157 duplicate headers removed, 1553 lines rejected (R2=514, R3=702, R4=337, R5=0), 428 claims mapped to Unknown diagnosis  (0.3s)
+[06:54:11] DIMENSIONS dim_date +1827, hospital/provider/diagnosis/procedure/insurer/plan (SCD-1) new=219 changed=0, dim_patient (SCD-2) +25000 versions, dim_claim_status +72  (0.4s)
+[06:54:21] FACT      fact_claim_line: 357,870 inserted, 0 updated (late-arriving adjudication)  (9.7s)
+[06:54:22] SNAPSHOT  fact_claim_monthly_snapshot rebuilt: 1,152 rows; indexes created  (1.5s)
+[06:54:22] BATCH 1 COMPLETE in 14.1s  (rows in fact: 357,870)
+[06:54:23] ===== ETL batch 2  (business date 2025-12-31) =====
+[06:54:24] EXTRACT   watermark 2024-12-31 -> 2025-12-31: 38,474 claim rows, 219,716 line rows, 25,000 patients  (1.1s)
+[06:54:24] TRANSFORM data-quality gate: 92 duplicate headers removed, 949 lines rejected (R2=320, R3=410, R4=219, R5=0), 283 claims mapped to Unknown diagnosis  (0.2s)
+[06:54:24] DIMENSIONS dim_date +0, hospital/provider/diagnosis/procedure/insurer/plan (SCD-1) new=0 changed=0, dim_patient (SCD-2) +2391 versions, dim_claim_status +0  (0.4s)
+[06:54:34] FACT      fact_claim_line: 210,773 inserted, 7,994 updated (late-arriving adjudication)  (10.2s)
+[06:54:35] SNAPSHOT  fact_claim_monthly_snapshot rebuilt: 1,728 rows; indexes created  (0.7s)
+[06:54:35] BATCH 2 COMPLETE in 12.5s  (rows in fact: 568,643)

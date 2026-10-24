@@ -1,0 +1,11 @@
+digraph G { rankdir=TB; nodesep=0.2; ranksep=0.18; graph [fontname="Liberation Serif", pad=0.15, bgcolor=white]; node [fontname="Liberation Serif", fontsize=12, style="filled,rounded", shape=box, fillcolor="#E8EEF5", color="#1F3A5F", penwidth=1.3]; edge [fontname="Liberation Serif", fontsize=10, color="#1F3A5F", penwidth=1.2];
+
+node [fontsize=10.5, margin="0.10,0.04"];
+st [label="Start batch", shape=oval]; w [label="Read watermark from etl_audit"]; ex [label="Extract rows with last_updated > watermark"];
+dd [label="Remove duplicate claim headers (R1)"]; vr [label="Validate lines: R2 negative billed, R3 paid > allowed,\nR4 service date range, R5 orphan line", fillcolor="#FBE9D8", color="#C8691E"];
+ok [label="Line valid?", shape=diamond, style=filled, fillcolor="white", margin="0.02,0.02"]; rj [label="Write to dq_reject", shape=cylinder, fillcolor=white];
+uk [label="Map missing / invalid ICD-10 to Unknown key (R6)"]; d1 [label="Upsert SCD-1 dimensions;\nSCD-2 patient: expire old row, add new version", fillcolor="#D7EEEC", color="#1B7F79"];
+lk [label="Surrogate-key and point-in-time lookup; compute measures"]; up [label="Upsert fact_claim_line on (claim_id, line_no)", fillcolor="#D7EEEC", color="#1B7F79"];
+sn [label="Rebuild monthly snapshot and indexes"]; au [label="Write etl_audit row; advance watermark"]; en [label="End", shape=oval];
+st -> w -> ex -> dd -> vr -> ok; ok -> rj [label=" no"]; ok -> uk [label=" yes"]; uk -> d1 -> lk -> up -> sn -> au -> en;
+}

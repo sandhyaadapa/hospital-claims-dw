@@ -1,0 +1,9 @@
+digraph G { rankdir=LR; nodesep=0.6; ranksep=1.1; graph [fontname="Liberation Serif", pad=0.15, bgcolor=white]; node [fontname="Liberation Serif", fontsize=12, style="filled,rounded", shape=box, fillcolor="#E8EEF5", color="#1F3A5F", penwidth=1.3]; edge [fontname="Liberation Serif", fontsize=10, color="#1F3A5F", penwidth=1.2];
+
+a [label="Hospital Billing /\nHIS System", shape=box, style="filled", fillcolor="white"];
+b [label="Insurer / TPA\nAdjudication Feed", shape=box, style="filled", fillcolor="white"];
+c [label="Claims Analyst /\nFinance Manager", shape=box, style="filled", fillcolor="white"];
+p [label="0\nHospital Insurance-Claims\nData Warehouse System", shape=circle, fillcolor="#D7EEEC", color="#1B7F79", width=2.3, fontsize=13];
+a -> p [label="claim headers,\nclaim lines, patient master"]; b -> p [label="status, denial reason,\npayment amounts"];
+p -> c [label="OLAP results, KPI dashboard,\nreports"]; c -> p [label="analysis requests\n(query parameters)"];
+}

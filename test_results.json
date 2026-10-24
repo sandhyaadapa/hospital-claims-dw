@@ -1,0 +1,106 @@
+[
+ {
+  "id": "TC01",
+  "desc": "Row-count reconciliation",
+  "input": "Source lines passing DQ rules vs fact rows",
+  "expected": "568,643",
+  "actual": "568,643",
+  "status": "Pass"
+ },
+ {
+  "id": "TC02",
+  "desc": "Paid-amount reconciliation",
+  "input": "SUM(paid) source vs fact",
+  "expected": "3,483,995,473.32",
+  "actual": "3,483,995,473.32",
+  "status": "Pass"
+ },
+ {
+  "id": "TC03",
+  "desc": "Referential integrity",
+  "input": "Orphan foreign keys across 11 fact-to-dimension links",
+  "expected": "0",
+  "actual": "0",
+  "status": "Pass"
+ },
+ {
+  "id": "TC04",
+  "desc": "Duplicate claim headers removed",
+  "input": "249 duplicate headers injected; distinct claims compared",
+  "expected": "100,000",
+  "actual": "100,000",
+  "status": "Pass"
+ },
+ {
+  "id": "TC05",
+  "desc": "Negative billed amount rejected",
+  "input": "834 negative lines injected",
+  "expected": "834 rejected, 0 in fact",
+  "actual": "834 rejected, 0 in fact",
+  "status": "Pass"
+ },
+ {
+  "id": "TC06",
+  "desc": "Missing / invalid diagnosis mapped to Unknown",
+  "input": "NULL and invalid ICD-10 codes injected",
+  "expected": "698 claims on key -1",
+  "actual": "698 claims on key -1",
+  "status": "Pass"
+ },
+ {
+  "id": "TC07",
+  "desc": "SCD Type-2 versioning",
+  "input": "2391 patients changed city or plan",
+  "expected": "25,000 current rows; 2391 new versions; 0 overlaps",
+  "actual": "25,000 current rows; 2391 new versions; 0 overlaps",
+  "status": "Pass"
+ },
+ {
+  "id": "TC08",
+  "desc": "Point-in-time dimension lookup",
+  "input": "Admission date must fall in the linked patient version's validity period",
+  "expected": "0",
+  "actual": "0",
+  "status": "Pass"
+ },
+ {
+  "id": "TC09",
+  "desc": "Date dimension continuity",
+  "input": "Calendar 2022-01-01 to 2026-12-31 without gaps",
+  "expected": "1,826 days",
+  "actual": "1,826 rows",
+  "status": "Pass"
+ },
+ {
+  "id": "TC10",
+  "desc": "Snapshot fact reconciliation",
+  "input": "Monthly snapshot vs transaction fact (paid amount, claim count)",
+  "expected": "3,483,995,473.32; 100,000",
+  "actual": "3,483,995,473.32; 100,000",
+  "status": "Pass"
+ },
+ {
+  "id": "TC11",
+  "desc": "Query-result equivalence",
+  "input": "Six OLAP queries run on 3NF copy and on star schema",
+  "expected": "6 of 6 identical (+ snapshot)",
+  "actual": "6 of 6 identical",
+  "status": "Pass"
+ },
+ {
+  "id": "TC12",
+  "desc": "Late-arriving adjudication update",
+  "input": "1,413 claims pending in batch 1 adjudicated later",
+  "expected": "0 stale Pending claims; lines updated in place",
+  "actual": "0 stale; 7,994 lines updated",
+  "status": "Pass"
+ },
+ {
+  "id": "TC13",
+  "desc": "Idempotent re-load (replay of batch 2)",
+  "input": "Watermark reset; batch 2 data loaded again",
+  "expected": "0 new rows; totals unchanged (568,643)",
+  "actual": "0 new rows; totals unchanged (568,643)",
+  "status": "Pass"
+ }
+]

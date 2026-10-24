@@ -1,0 +1,12 @@
+digraph G { rankdir=LR; nodesep=0.18; ranksep=1.3; graph [fontname="Liberation Serif", pad=0.15, bgcolor=white]; node [fontname="Liberation Serif", fontsize=12, style="filled,rounded", shape=box, fillcolor="#E8EEF5", color="#1F3A5F", penwidth=1.3]; edge [fontname="Liberation Serif", fontsize=10, color="#1F3A5F", penwidth=1.2];
+
+node [fontsize=11];
+an [label="Claims\nAnalyst", shape=box, style=filled, fillcolor=white]; fm [label="Finance\nManager", shape=box, style=filled, fillcolor=white];
+de [label="Data\nEngineer", shape=box, style=filled, fillcolor=white]; il [label="Insurer\nLiaison", shape=box, style=filled, fillcolor=white];
+subgraph cluster_sys { label="Hospital Insurance-Claims Data Warehouse"; fontsize=12; style=rounded; color="#1F3A5F"; fontcolor="#1F3A5F";
+ node [shape=ellipse, style=filled, fillcolor="#E8EEF5"];
+ u1 [label="Run incremental ETL load"]; u2 [label="Review data-quality rejects"]; u3 [label="Manage dimensions (SCD)"];
+ u4 [label="Run OLAP queries"]; u5 [label="View claims dashboard"]; u6 [label="Analyse denial reasons"]; u7 [label="Track settlement ratio\nand revenue cycle"]; u8 [label="Export reports"]; }
+de -> u1 [dir=none]; de -> u2 [dir=none]; de -> u3 [dir=none]; an -> u4 [dir=none]; an -> u5 [dir=none]; an -> u6 [dir=none];
+fm -> u5 [dir=none]; fm -> u7 [dir=none]; fm -> u8 [dir=none]; il -> u6 [dir=none]; il -> u7 [dir=none];
+}

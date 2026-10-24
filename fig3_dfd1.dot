@@ -1,0 +1,11 @@
+digraph G { rankdir=TB; nodesep=0.35; ranksep=0.35; graph [fontname="Liberation Serif", pad=0.15, bgcolor=white]; node [fontname="Liberation Serif", fontsize=12, style="filled,rounded", shape=box, fillcolor="#E8EEF5", color="#1F3A5F", penwidth=1.3]; edge [fontname="Liberation Serif", fontsize=10, color="#1F3A5F", penwidth=1.2];
+
+node [fontsize=11];
+ext1 [label="Source\nsystems", style=filled, fillcolor=white]; ext2 [label="Analyst", style=filled, fillcolor=white];
+p1 [label="1.0\nExtract\n(watermark)", shape=circle, fillcolor="#FBE9D8", color="#C8691E"]; p2 [label="2.0\nValidate\nand clean", shape=circle, fillcolor="#FBE9D8", color="#C8691E"];
+p3 [label="3.0\nBuild\ndimensions", shape=circle, fillcolor="#FBE9D8", color="#C8691E"]; p4 [label="4.0\nLoad\nfacts", shape=circle, fillcolor="#FBE9D8", color="#C8691E"];
+p5 [label="5.0\nAggregate\nsnapshot", shape=circle, fillcolor="#FBE9D8", color="#C8691E"]; p6 [label="6.0\nOLAP\nquery", shape=circle, fillcolor="#D7EEEC", color="#1B7F79"];
+d1 [label="D1 Staging", shape=cylinder, fillcolor=white]; d2 [label="D2 DQ reject log", shape=cylinder, fillcolor=white]; d3 [label="D3 Dimensions", shape=cylinder, fillcolor=white];
+d4 [label="D4 Fact tables", shape=cylinder, fillcolor=white]; d5 [label="D5 ETL audit", shape=cylinder, fillcolor=white];
+ext1 -> p1 [label="delta rows"]; p1 -> d1; d1 -> p2; p2 -> d2 [label="rejects"]; p2 -> p3 [label="clean rows"]; p3 -> d3; p3 -> p4 [label="keys"]; d3 -> p4; p4 -> d4; d4 -> p5; p5 -> d4 [label="snapshot", constraint=false]; p4 -> d5 [style=dashed]; d4 -> p6; d3 -> p6; p6 -> ext2 [label="results"]; ext2 -> p6 [label="request", constraint=false];
+}
