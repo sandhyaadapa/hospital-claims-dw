@@ -27,7 +27,10 @@ st.set_page_config(page_title="ClaimsLens", page_icon="🏥", layout="wide")
 
 @st.cache_data
 def load():
-    with open(os.path.join(ROOT, "app", "data.json"), encoding="utf-8") as f:
+    _p = os.path.join(ROOT, "app", "data.json")
+    if not os.path.exists(_p):
+        _p = os.path.join(ROOT, "data.json")  # flat upload fallback
+    with open(_p, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -77,7 +80,7 @@ with tabs[0]:
 
     st.subheader("Monthly billed and paid (₹ crore)")
     tr = f.groupby("month")[["billed", "paid"]].sum().div(CR)
-    tr.index = [label(m) for m in tr.index]
+    tr.index = [f"{m // 100}-{m % 100:02d}" for m in tr.index]  # ISO labels sort in time order
     st.bar_chart(tr, stack=False)
 
     a, b = st.columns(2)
